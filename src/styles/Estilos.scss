@@ -1,0 +1,144 @@
+$spacer: 1rem;
+@import "../../node_modules/bootstrap/scss/bootstrap.scss" ;
+
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  
+}
+.logoNav{
+  margin-left: 30px;
+  margin-top: 10px;
+  overflow: hidden;
+  position:fixed;
+  z-index: 100;
+
+}
+.menuV{
+  float:left;
+  width:15%;
+  overflow: hidden;
+  margin-top:30vh;
+  margin-left:1%;
+  position:fixed;
+  z-index: 100;
+  
+}
+.menuV a{
+  background-color:none;
+  color: black;
+  text-decoration:none ;
+  display:block;
+  align-items: center;
+  text-align: center;
+  padding-top: 8%;
+  padding-bottom: 5%;
+  margin-top: 5%;
+  border: 30px;
+}
+
+.menuV a:hover{
+  background-color:black;
+	margin-left: 50px;
+	transition: 0.6s;
+  
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }
+  /*font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  */
+
+.a{
+  font-family: 'Poppins', sans-serif;
+}
+
+.h1{
+  font-family: 'Poppins', sans-serif;
+  color:black;
+  font-weight:bold;
+}
+ .h4, h6, h3{
+  font-family: 'Poppins', sans-serif;
+  
+
+}
+
+h5{
+  font-family: 'Poppins', sans-serif;  
+  color:black;
+  
+ 
+}
+
+.correo{
+  font-size: 12px;
+}
+.texto-borde {
+  -webkit-text-stroke: 2px black;
+  color: white; 
+}
+
+.icono{
+  size: 10px;
+
+}
+
+.img-thumbnail{
+  background-color: none;
+}
+
+.carousel{
+position:none;
+}
+
+.video-container{
+ position:relative;
+
+ top:0;
+ left:0;
+ width:100%;
+ height: calc(100vw * 0.5625 ) ;
+overflow: hidden;
+}
+
+.video-container video{
+  position: absolute;
+  top:0;
+  left: 0;
+  width:100vw;
+}

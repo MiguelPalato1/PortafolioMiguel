@@ -1,0 +1,136 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/Estilos.scss";
+---
+
+<Layout title="Contacto">
+	<main>
+		
+		<!-- SECCIÓN DE FORMULARIO DE CONTACTO  -->
+		<section class="container mt-5 mb-5 pb-5" >
+			<div class="row justify-content-center">
+				<div class="col-lg-6 ">
+					
+					<form action="/data" id="Formulario" method="get">
+						<div class="my-3">
+							<label for="Nombre" class="formEtiquetas">Name:</label>
+							<input
+								type="text"
+								name="nombre"
+								class="form-control"
+								id="Nombre"
+								placeholder="Enter your name" 
+								required
+							/>
+						</div>
+						<div class="my-3">
+							<label for="Correo" class="formEtiquetas" >Mail:</label>
+							<input
+								type="email"
+								name="correo"
+								class="form-control"
+								id="Correo"
+								placeholder="Enter email"
+								required
+							/>
+						</div>
+						<div class="mb-3">
+							<label for="Tel" class="formEtiquetas" >Phone:</label>
+							<input
+								type="tel"
+								name="telefono"
+								class="form-control"
+								id="Tel"
+								placeholder="Phone (It is not a mandatory field)"
+							/>
+						</div>
+
+						<div class="mb-3">
+							<label for="Mensaje" class="formEtiquetas" >Message:</label>
+							<textarea
+								name="mensaje"
+								class="form-control"
+								placeholder="Message"
+								id="Mensaje"
+								required></textarea>
+						</div>
+
+						<button type="submit" class="boton btn btn-danger" name="enviar">
+							Send
+						</button>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<!-- MODAL DE CONFIRMACIÓN -->
+		<div
+			class="modal fade"
+			id="modalFunciona"
+			tabindex="-1"
+			aria-labelledby="exampleModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">
+							Send correctly
+						</h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"></button>
+					</div>
+					<div class="modal-body">Your email application will then open to send the information</div>
+					<div class="modal-footer">
+						<button
+							type="button"
+							class="btn btn-secondary"
+							data-bs-dismiss="modal">Understood</button
+						>						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</main> <!-- Termina contenido visible  -->
+
+	<!-- CÓDIGO EN JAVASCRIPT PARA ENVIAR EL EVENTO GET  -->
+	<script is:inline>
+		window.addEventListener("DOMContentLoaded", (event) => {
+			const formulario = document.getElementById("Formulario");
+			formulario.addEventListener("submit", (event) => {
+				event.preventDefault();
+
+				const formData = new FormData(formulario);
+				var data = {};
+				for (var pair of formData.entries()) {
+					data = {...data, [pair[0]] : pair[1]}    				
+  				}			
+
+				const referencia =
+					"mailto:ma.mosquedapalato@hotmail.com?subject=Quiero%20contactar%20con%20el%20artista&body=Nombre:%20" +
+					data.nombre +
+					"%0D%0ACorreo:%20" +
+					data.correo +
+					"%0D%0ATelefono:%20" +
+					data.tel +
+					"%0D%0AMensaje:%20" +
+					data.mensaje;
+
+				const enlace = document.createElement("a");
+				enlace.href = referencia;
+				enlace.click();
+
+				const modalConfirmacion = new bootstrap.Modal(document.getElementById("modalFunciona"), {});				
+				modalConfirmacion.show();
+			});
+		});
+	</script>
+</Layout>
+ 
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+    </style>

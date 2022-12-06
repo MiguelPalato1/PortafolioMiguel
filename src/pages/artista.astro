@@ -1,0 +1,129 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/Estilos.scss";
+
+---
+<Layout title="Artista">
+   
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 pt-5 mt-5">
+                <hr class="px-5"/>
+                <h5>Hi, my name is</h5>
+                <h1 class="display-1 mb-4">Miguel Angel Mosqueda Palato</h1>
+                <h3 class="text-muted mb-5">I love desing and creating new things.</h3>
+
+                <h5 class="mb-5 pb-5" style="padding-right: 35%;"> I am a digital artist focused on graphic
+                    desing, as well as web desing (my intention is to create exceptional digital experiences).
+                    I am currently focused on digital desing for brands.
+                </h5>
+            </div>
+        </div> 
+    </div>
+
+    <div class="container-fluid text-dark bg-white " style="height:auto">
+        <div class="row" style="padding-left: 12%;">
+            <div class="col-lg-7 col-xs-12 example"> 
+                <h1 class="display-2 text-center p-3 mt-5 animate_animated animate__fadeInLeft">
+                    About me
+                </h1>
+                <h4 class="text-muted text-center p-1 ">
+                    I love desing and creating new things.
+                </h4>
+                <h6 class="text-center lh-base p-5 mb-5 lead ">Hello, my name is Miguel Angel Mosqueda Palat and 
+                    I really enjoy creating content for the interne. My interest in desing began since I was a little
+                    and grew as time went by.
+                    Today I have had the opportunity to educate myself in a prestigiuos university in the area of digital
+                    art. As well as being able to work as freelancer and create various projects focused on graphic desing.
+                </h6>
+            </div>
+            <div class="col-lg-5 col-xs-12 p-2"> 
+            <img class="rounded-circle pt-3 mt-3 img-fluid" src="/public/YoHd.png" width="100%">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid text-dark bg-white " style="height:auto">
+        <div class="row" style="padding-left: 12%;">
+            <div class="col-lg-12 col-xs-12" style="padding-left: 15%;"> 
+                <h2 class="display-3 text-end pl-5 mt-5">
+                    Programs
+                </h2>
+                <h4>Adobe Ilustrator</h4>
+                <div class="progress" style="height: 25px;">
+                    <div class="progress-bar bg-dark" role="progressbar" style="width:90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <h4>Adobe InDesing</h4>
+                <div class="progress" style="height: 25px;">
+                    <div class="progress-bar bg-dark" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <h4>Adobe Photoshop</h4>
+                <div class="progress" style="height: 25px;">
+                    <div class="progress-bar bg-dark" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <h4>Adobe AfterEffects</h4>
+                <div class="progress" style="height: 25px;">
+                    <div class="progress-bar bg-dark" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <h4>Unity</h4>
+                <div class="progress" style="height: 25px;">            
+                    <div class="progress-bar bg-dark" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+    </div>   
+   
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 p-5 m-5">
+                
+                <h4 class="text-center">What´s next?</h4>
+                <h3 class="display-4 mb-4 text-center">Get in Touch</h3>
+                <h5 class="text-muted mb-5 text-center">I am currently open to any opportunity to create multimedia content,
+                    especially in the area of graphic desing and web desing, yo can contact me </h5> 
+                    <a type="button" class="btn btn-dark boton" href="/contacto" role="button">Contact me</a>
+                    <hr class="px-5"/>
+                
+                   
+                
+
+            </div>
+        </div> 
+    </div>
+
+    
+</Layout>
+
+<style>
+    *{
+        padding-left: 10%;
+        padding-right: 5%;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+   
+    .h1{
+        font-family: 'Poppins', sans-serif;
+        font-weight: 800;
+    }
+    .h5{
+        color: black;
+       
+    }
+    .display-1{
+        font-weight: 800;
+    }
+ 
+    .display-2{
+        font-weight: 600;
+    }
+
+    .display-3, .display-4{
+        font-weight: 600;
+    }
+
+    .boton{
+        justify-content: center;
+        align-items: center;
+        margin-left: 50vh;
+    }
+</style>
